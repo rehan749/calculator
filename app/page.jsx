@@ -16,6 +16,10 @@ export default function Home() {
     } 
     else if (value === 'C') {
       setResult('');
+    }
+      else if (value === 'Del') {
+        setResult(String(result).slice(0, -1)); // Remove the last character
+      
     } else {
       setResult(result + value);
     }
@@ -56,8 +60,9 @@ export default function Home() {
         <button className="bg-red-500" onClick={() => handleClick('=')}>=</button>
         <button className="bg-gray-500" onClick={() => handleClick('/')}>/</button>
       </div>
-      <div className=" w-80 p-2  border-b-2 border-x-2 border-black"style={{ borderRadius: '0px 0px 5px 5px' }}>
-        <button className="bg-green-500" onClick={() => handleClick('C')}>C</button>
+      <div className=" w-80 p-2 flex justify-between align-middle border-b-2 border-x-2 border-black"style={{ borderRadius: '0px 0px 5px 5px' }}>
+        <button className="bg-green-500 w-36" onClick={() => handleClick('C')}>C</button>
+        <button className="w-36 bg-amber-500" onClick={() => handleClick('Del')}>Del</button>
       </div>
     </div>
   </section>
