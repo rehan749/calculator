@@ -13,7 +13,8 @@ export default function Home() {
       } catch (error) {
         setResult('Error');
       }
-    } else if (value === 'C') {
+    } 
+    else if (value === 'C') {
       setResult('');
     } else {
       setResult(result + value);
@@ -27,8 +28,8 @@ export default function Home() {
 
     <h1 className="font-bold">Calculator App</h1>
 
-    <div className="input-text w-80">
-        <input type="text" className="block w-full rounded-md border-2 border-black py-3 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+    <div className="input-text w-80 my-2">
+        <input type="text" className="block w-full rounded-md border-2 border-black py-3 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
          value={result} readOnly />
       </div>
       <div className=" w-80 p-2 flex justify-between align-middle border-t-2 border-x-2 border-black">
